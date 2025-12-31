@@ -1,2 +1,10 @@
 # Top-2000-TV-Shows
+
 Logistic Regression Model on Predicting Binary Rating Outcomes. 
+This project aimed to predict where TV shows would be placed in the top performing series of whether a show rating will be in the upper or lower thresholds. The independent variables used for this model were the genre, popularity score and number of votes, with the dependent variable being the binary outcome of the rating score being above the mean, coded as 0 as (Low) or 1 (High). 
+
+The data set used for this project was a public domain data set from Kaggle named 'Top 2000 Highest-Rated TV Shows Dataset'. This data set was extracted from TMDB and was a clean simple tableau csv containing 2000 rows and 11 columns. 
+
+Linear regression was initially considered for this project, to predict the actual rating as a continuous variable. Within the genre column, there were multiple genres in some rows of data which needed to be split out into multiple columns of one hot encoding. Due to this, the model can become unstable and produce extreme coefficient values for genres. Logistic regression is more stable when working with one hot encoding and looks to focus on probability like outputs or rankings. One hot encoding was chosen for this project for its performance " The research findings revealed that the one-hot encoding method demonstrated the best performance." Wenbin Zhu 2024.
+
+The model achieved an accuracy of 69%, with the performance balanced across both ranking classes. Exploring the confusion matrix, the model correctly predicted 157 lower ranked series and 119 higher ranked series. 49 lower ranked series were predicted as high ranked and 75 higher ranked series were predicted as low ranked. The total 124 incorrect results were explored further with the actual score ranging from 7.1 to 8.6 and a mean of 7.87 (7.851 is the overall mean of the entire dataset). The model can be improved by having a larger dataset with more diversity, and less bias in presenting only the top TV shows. Balancing of the initial data set is also an option for future considerations. 
